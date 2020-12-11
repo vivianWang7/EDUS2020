@@ -10,3 +10,4 @@ async def dialog_error(request):
     return render_html(request, 'dialog_error.html',
                        message=message,
                        return_path=return_path)
+

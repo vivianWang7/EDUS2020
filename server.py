@@ -5,11 +5,11 @@ from serv.config import web_routes, home_path
 import serv.error_views
 import serv.main_views
 import serv.grade_views
+import serv.grade_actions
 import serv.student_views
 import serv.student_rest
 import serv.course_views
-
-import serv.grade_actions
+import serv.course_rest
 
 
 app = web.Application()

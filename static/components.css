@@ -1,7 +1,7 @@
 .btn {
     color: #fff;
-    background-color: hsl(329 45% 38%);
-    border-color: hsl(329deg 45% 38%);
+    background-color: hsl(329 ,45%, 38%);
+    border-color: hsl(329, 45%, 38%);
     width: fit-content;
     font-weight: bold;
     padding: 0.2em 1em;
@@ -73,7 +73,8 @@ table.table {
 
 .table th,
 .table td {
-    min-width: 5em;
+    min-width: 7em;
+    text-align: center;
 }
 
 .table tr {
@@ -81,19 +82,19 @@ table.table {
 }
 
 .table thead > tr:first-child {
-    background-color: hsl(306 40% 20%);
+    background-color: hsl(306, 40%, 20%);
     color: #fff;
     line-height: 2.5;
 }
 
 .table tr:hover {
-    background-color: hsl(60 100% 85%);
+    background-color: hsl(60 ,100% ,85%);
 }
 
 .table tr:nth-child(odd) {
-    background-color: hsl(306 40% 100%);
+    background-color: hsl(306 ,40%, 100%);
 }
 
 .table tr:nth-child(even) {
-    background-color: hsl(306 40% 90%);
+    background-color: hsl(306 ,40% ,90%);
 }

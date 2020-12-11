@@ -43,7 +43,7 @@ class RecordCursor:
         return record
 
     def fetch_first(self):
-        """ 读取数据的第一条 """
+        '''读取第一条数据'''
 
         try:
             return iter(self).__next__()
