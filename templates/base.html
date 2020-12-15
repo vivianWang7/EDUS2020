@@ -1,4 +1,7 @@
 <html>
+    <html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>成绩管理</title>
         <link rel="stylesheet" href="/contrib/animate_4_1_1.min.css" />
@@ -27,10 +30,18 @@
                     <li {% if location.pathname.startswith("/course") %}active{% endif %}>
                         <a href="/course">课程</a>
                     </li>
-                    <li {% if location.pathname.startswith("/grade") %}active{% endif %}>
-                        <a href="/grade">成绩单</a>
-                    </li>
-                </ul>
+                    <li {% if location.pathname.startswith("/grade") %}active{% endif %}>                    
+                        <div  class="menu_btn_v">成绩
+                            <div class="menu_item_v trans_fadeout">
+                                <a href="/grade">成绩登记</a>
+                            </div>
+                            <div  class="menu_item_v trans_fadeout">
+                                <a href="grade">成绩查询</a>
+                            </div>
+                        </div>
+                    </li>  
+                    </ul>
+                     
             </div>
             <div class="page-content">
                 {% block page_content %}{% endblock %}
