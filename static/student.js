@@ -1,4 +1,6 @@
 async function renderList() {
+    console.log("1");
+
     let response = await fetch(`/api/student/list`);
     if (!response.ok) {
         console.error(response);
@@ -49,6 +51,9 @@ async function renderList() {
 }
 
 function renderRecordCtrlbar(item) {
+
+    console.log("2");
+
     let ctrlbarEl = document.createElement("div");
 
     let editBtn = document.createElement("a");
@@ -86,6 +91,8 @@ function renderRecordCtrlbar(item) {
 }
 
 async function openEditDialog(item) {
+    console.log("3");
+
     let dialog = document.querySelector(".student-editor");
 
     let dialogTitle = dialog.querySelector(".dialog-head");
@@ -115,6 +122,9 @@ async function openEditDialog(item) {
 }
 
 async function renderEditDialog() {
+
+    console.log("4");
+
     let newStudentBtn = document.querySelector(".paper #new-btn");
     newStudentBtn.onclick = (e) => {
         openEditDialog();
@@ -183,6 +193,8 @@ async function renderEditDialog() {
 }
 
 async function openComfirmationDialog({ message, onOk, onCancel }) {
+    console.log("z");
+
     let dialog = document.querySelector(".comfirmation-dialog");
 
     let closeDialog = () => {

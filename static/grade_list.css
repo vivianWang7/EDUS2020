@@ -1,6 +1,3 @@
-
-
-
 form.grade-form > input, form.grade-form > select {
     padding: 5px;
     font-size: 1.2em;
@@ -8,6 +5,11 @@ form.grade-form > input, form.grade-form > select {
 
 form.grade-form > select {
     min-width: 8em;
+}
+
+table.table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
 
@@ -20,7 +22,5 @@ form.grade-form > select {
 
 .ctrlbar > .btn {
     padding: 2px 15px;
-    background-color: hsl(306, 40% ,25%);
+    background-color: darkcyan;
 }
-
-

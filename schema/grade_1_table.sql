@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS course  (
     name     TEXT,        --课程名称
     teacher  TEXT,        --任课老师
     term     TEXT,        --学期
+    
     room     TEXT,        --上课地点
     week     INTEGER,     --周次【上课时间】
     day      TEXT,        --周几【上课时间】
@@ -37,16 +38,34 @@ ALTER TABLE course ALTER sn
     SET DEFAULT nextval('seq_course_sn');
 CREATE UNIQUE INDEX idx_course_no ON course(no);
 
---成绩单
+
+
 DROP TABLE IF EXISTS course_grade;
 CREATE TABLE IF NOT EXISTS course_grade  (
-    stu_sn INTEGER,     -- 学生序号
-    cou_sn INTEGER,     -- 课程序号
-    grade  NUMERIC(5,2), -- 最终成绩
+    stu_sn   INTEGER,     -- 学生序号
+    cou_sn   INTEGER,     -- 课程序号
+    grade    NUMERIC(5,2), -- 最终成绩
+
+
     PRIMARY KEY(stu_sn, cou_sn)
 );
 
 ALTER TABLE course_grade 
     ADD CONSTRAINT stu_sn_fk FOREIGN KEY (stu_sn) REFERENCES student(sn);
 ALTER TABLE course_grade 
+    ADD CONSTRAINT cou_sn_fk FOREIGN KEY (cou_sn) REFERENCES course(sn);
+    
+
+CREATE TABLE IF NOT EXISTS sc  (
+    stu_sn     INTEGER,     --学号
+    cou_sn     INTEGER,     -- 课程序号
+    cou_name   TEXT,        --课程名
+    states     TEXT,
+
+    PRIMARY KEY(stu_sn, cou_sn)
+);
+
+ALTER TABLE sc 
+    ADD CONSTRAINT stu_sn_fk FOREIGN KEY (stu_sn) REFERENCES student(sn);
+ALTER TABLE sc
     ADD CONSTRAINT cou_sn_fk FOREIGN KEY (cou_sn) REFERENCES course(sn);

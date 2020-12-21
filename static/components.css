@@ -53,11 +53,11 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    justify-content: flex-start;
     animation: fadeInDown; 
     animation-duration: 0.8s;
 }
+
 
 .paper > .paper-head {
     min-height: 2rem;
@@ -69,6 +69,7 @@
 
 table.table {
     border-collapse: collapse;
+    width: 100%;
 }
 
 .table th,

@@ -10,6 +10,10 @@ import serv.student_views
 import serv.student_rest
 import serv.course_views
 import serv.course_rest
+import serv.sc_views
+import serv.sc_rest
+import serv.login_rest
+import serv.login_view
 
 
 app = web.Application()

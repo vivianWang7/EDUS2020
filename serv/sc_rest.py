@@ -87,3 +87,4 @@ def delete_sc_action(request):
         """, dict(stu_sn=stu_sn, cou_sn=cou_sn))
 
     return web.HTTPFound(location="/sc")
+

@@ -29,7 +29,7 @@ async def action_grade_add(request):
             """, dict(stu_sn=stu_sn, cou_sn=cou_sn, grade=grade))
     except psycopg2.errors.UniqueViolation:
         query = urlencode({
-            "message": "已添加该学生的课程成绩",
+            "message": "已经添加该学生的课程成绩",
             "return": "/grade"
         })
         return web.HTTPFound(location=f"/error?{query}")
